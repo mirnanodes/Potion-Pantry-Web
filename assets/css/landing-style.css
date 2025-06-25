@@ -1,0 +1,62 @@
+/* assets/css/landing-style.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1593121925328-9a9934183a8b?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    /* Ganti URL gambar di atas dengan gambar "laboratorium fantasi" atau "apotek tua" dari unsplash.com atau pexels.com */
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Lapisan gelap untuk membuat teks lebih mudah dibaca */
+}
+
+.hero-section .container {
+    position: relative; /* Agar konten berada di atas lapisan gelap */
+    z-index: 2;
+}
+
+/* Navigasi */
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #5a4fcf;
+    border-color: #5a4fcf;
+}
+
+.btn-primary:hover {
+    background-color: #493fb3;
+    border-color: #493fb3;
+}
+
+/* Section Styling */
+section {
+    padding: 80px 0;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
