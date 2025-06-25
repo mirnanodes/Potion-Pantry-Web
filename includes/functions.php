@@ -32,7 +32,7 @@ function getUserStats($user_id) {
         SELECT COUNT(*) 
         FROM Products 
         WHERE user_id = ? 
-        AND expiration_date BETWEEN C URDATE() AND DATE_ADD(CURDATE(), INTERVAL 180 DAY)
+        AND expiration_date BETWEEN CURDATE() AND DATE_ADD(CURDATE(), INTERVAL 180 DAY)
     ");
     $stmt->execute([$user_id]);
     $expiring_soon = $stmt->fetchColumn();
